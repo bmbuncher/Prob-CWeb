@@ -1,4 +1,5 @@
-# Supplementary Material for Probabilistic cosmic web classification using fast-generated training data
+# Probabilistic cosmic web classification using fast-generated training data
+## Supplementary Material
 
 Brandon Buncher<sup>1</sup> and Matias Carrasco Kind<sup>2,3</sup>
 
