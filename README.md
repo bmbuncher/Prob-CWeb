@@ -2,10 +2,10 @@
 
 By Brandon Buncher<sup>1</sup> and Matias Carrasco Kind<sup>2,3</sup>
 
-<font size="6">This is some text!</font>
+<sup><sup>1</sup>Department of Physics, University of Illinois, Urbana IL 61801 USA</sup>
 
-<sup>1</sup>Department of Physics, University of Illinois, Urbana IL 61801 USA
 <sup>2</sup>Department of Astronomy, University of Illinois, Urbana IL 61801 USA
+
 <sup>3</sup>National Center for Supercomputing Applications, Urbana IL 61801 USA
 
 
