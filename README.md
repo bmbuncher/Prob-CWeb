@@ -1,12 +1,10 @@
 # Supplementary Material for Probabilistic cosmic web classification using fast-generated training data
 
-By Brandon Buncher<sup>1</sup> and Matias Carrasco Kind<sup>2,3</sup>
+Brandon Buncher<sup>1</sup> and Matias Carrasco Kind<sup>2,3</sup>
 
-<sup><sup>1</sup>Department of Physics, University of Illinois, Urbana IL 61801 USA</sup>
-
-<sup>2</sup>Department of Astronomy, University of Illinois, Urbana IL 61801 USA
-
-<sup>3</sup>National Center for Supercomputing Applications, Urbana IL 61801 USA
+<sub><sup><sup>1</sup>Department of Physics, University of Illinois, Urbana IL 61801 USA</sup></sub>  
+<sub><sup><sup>2</sup>Department of Astronomy, University of Illinois, Urbana IL 61801 USA</sup></sub>  
+<sub><sup><sup>3</sup>National Center for Supercomputing Applications, Urbana IL 61801 USA</sup></sub>  
 
 
 This repository contains supplementary material for Probabilistic cosmic web classification using fast-generated training data (https://arxiv.org/abs/1912.04412).
