@@ -1,4 +1,14 @@
-# Summary
+# Supplementary Material for Probabilistic cosmic web classification using fast-generated training data
+
+By Brandon Buncher<sup>1</sup> and Matias Carrasco Kind<sup>2,3</sup>
+
+<font size="6">This is some text!</font>
+
+<sup>1</sup>Department of Physics, University of Illinois, Urbana IL 61801 USA
+<sup>2</sup>Department of Astronomy, University of Illinois, Urbana IL 61801 USA
+<sup>3</sup>National Center for Supercomputing Applications, Urbana IL 61801 USA
+
+
 This repository contains supplementary material for Probabilistic cosmic web classification using fast-generated training data (https://arxiv.org/abs/1912.04412).
 
 We describe a novel trained machine learning algorithm we developed to classify individual cosmic web particles as members of halos/clusters, filaments, and voids.  We trained a random forest algorithm using a "fast-generated" dataset.  This dataset was designed to approximate the large-scale features of the cosmic web using pre-determined generation algorithm.  While this model lacks physical detail, it can be used to generate training data at a fraction of the cost of an N-body simulation without affecting classification accuracy.  This algorithm is described in detail in Section 2.1, and we demonstrate the robustness of its predictions in in Section 4.
