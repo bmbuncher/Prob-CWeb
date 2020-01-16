@@ -48,7 +48,7 @@ Contains figures showing the predictions made by the random forest algorithm on 
 Contains figures showing the predictions made by the random forest algorithm on TSIM.  These predictions are described in Section 3.2.
 
 
-# File naming conventions reason for inclusion
+# File naming conventions / reason for inclusion
 
 ### neigh_max\<n\>
   These figures contain predictions made by an algorithm trained with only *KNN* calculations for *k* <= *n*.
