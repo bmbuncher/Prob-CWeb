@@ -20,8 +20,8 @@ Note that some of these plots are included in the paper directly or with altered
 
 For each particle (referred to here as the *central particle*) in the training dataset and *SIM*/*TSIM*, a set of measurements was performed.  These measurements were used to generate training data and make class predictions.  Save for *VOR* and *KNN* calculations, the measurements performed used all particles within a radius *R* of the central particle.  In addition, all measurements save for *PCA* measured the density field magnitude.  Additional details are provided in Section 2.2 and Table 2; this information is summarized here for convenience.
 
-| Abbreviation |     Name / Description |
-|:------------:|:------------:|:----------- |
+| Abbreviation | Name / Description |
+|:------------:| ------------------ |
 | *VOR*        | Voronoi Cell Volume: a Voronoi diagram of all particles in the dataset was created.  This measured the volume of the cell associated with each *central particle* |
 | *CMD*        | Center of mass distance: the distance between the *central particle* and the center of mass of all othera particles within a radius *R* of the *central particle*. |
 | *MI*         | Moment of inertia: value of the moment of inertia for all particles within a radius *R* of the *central particle*. |
@@ -113,4 +113,5 @@ Contains figures showing the predictions made by the random forest algorithm on 
 # References
 
 (1) Pedregosa F., et al., 2011, Journal of Machine Learning Research, 12, 2825
+
 (2) Tipping M. E., Bishop C. M., 1998, Mixtures of Probabilistic Principal Component Analysers
