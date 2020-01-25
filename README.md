@@ -24,10 +24,9 @@ In this repository, we have included supplementary figures relevant to the artic
 
 Note that some of these plots are included in the paper directly or with altered formatting; however, we chose to include these figures here to allow for easier comparison of the different metric sets.
 
+# Key names, abbreviations, and directory structure
 
-## Key
-
-**Training Metrics**
+## Training metric abbreviations
 
 For each particle (referred to here as the *central particle*) in the training dataset and *SIM*/*TSIM*, a set of measurements was performed.  These measurements were used to generate training data and make class predictions.  Save for *VOR* and *KNN* calculations, the measurements performed used all particles within a radius *R* of the central particle.  In addition, all measurements save for *PCA* measured the density field magnitude.  Additional details are provided in Section 2.2 and Table 2; this information is summarized here for convenience.
 
@@ -40,84 +39,84 @@ For each particle (referred to here as the *central particle*) in the training d
 | *KNN*        | Distance between the central particle and its *k*th nearest neighbor |
 | *PCA*        | Principal component analysis explained variance ratio: a PCA decomposition was performed on the positions of all particles within a radius *R* of the *central particle*.  The difference between the largest and smallest explained variance ratios was used to measure the density field directionality.  For more information on PCA decomposition, see (1) and (2) |
 
-## Folder contents
+## Directory contents
 
 ### train
 
-Contains figures showing the training dataset with and without void particles.  The way that this dataset was generated is described in Section 2.1.
+- Contains figures showing the training dataset with and without void particles.  The way that this dataset was generated is described in Section 2.1.
 
 ### test_true
 
-Contains figures showing the toy model prediction dataset (referred to as TSIM) with and without void particles.  The coloration corresponds with the true class values inherited from its creation algorithm.  The way that this dataset was generated is described in Section 2.1.
+- Contains figures showing the toy model prediction dataset (referred to as TSIM) with and without void particles.  The coloration corresponds with the true class values inherited from its creation algorithm.  The way that this dataset was generated is described in Section 2.1.
 
 ### toy_to_SIM
 
-Contains figures showing the predictions made by the random forest algorithm on SIM, an N-body simulation with 256^3 particles (described in detail in Section 2 and Table 2).  These predictions are described in Section 3.1.
+- Contains figures showing the predictions made by the random forest algorithm on SIM, an N-body simulation with 256^3 particles (described in detail in Section 2 and Table 2).  These predictions are described in Section 3.1.
 
 ### toy_to_TSIM
 
-Contains figures showing the predictions made by the random forest algorithm on TSIM.  These predictions are described in Section 3.2.
+- Contains figures showing the predictions made by the random forest algorithm on TSIM.  These predictions are described in Section 3.2.
 
 
 ## File naming conventions / reason for inclusion
 
 ### neigh_max\<n\>
-  These figures contain predictions made by an algorithm trained with only *KNN* calculations for *k* <= *n*.
+- These figures contain predictions made by an algorithm trained with only *KNN* calculations for *k* <= *n*.
   
-  The goal of these were to demonstrate that *KNN* is an effective measure of the density magnitude, as well as how its effectiveness changes with larger *k*-values.
+- The goal of these were to demonstrate that *KNN* is an effective measure of the density magnitude, as well as how its effectiveness changes with larger *k*-values.
 
 ### neigh_pca_\<n\>
-  These figures contain predictions made by an algorithm trained with only *KNN* and *PCA* calculations for *k* <= *n*.
+- These figures contain predictions made by an algorithm trained with only *KNN* and *PCA* calculations for *k* <= *n*.
   
-  The goal of these were to demonstrate that *PCA* calculations in tandem with *KNN* improves the robustness of our predictions, particularly for filaments, and lessens the dependence of our predictions on the maximum *k*-value.
+- The goal of these were to demonstrate that *PCA* calculations in tandem with *KNN* improves the robustness of our predictions, particularly for filaments, and lessens the dependence of our predictions on the maximum *k*-value.
 
 ### all
-  These figures contain predictions made by an algorithm trained using all metrics at all *R*/*k*-values.
+- These figures contain predictions made by an algorithm trained using all metrics at all *R*/*k*-values.
   
-  This metric set was primarily used for comparison with other data sets.
+- This metric set was primarily used for comparison with other data sets.
 
 ### cmd, mi, enc
-  These figures contain predictions made by an algorithm trained using only the specified feature.  These calculations used all *R*-values.
+- These figures contain predictions made by an algorithm trained using only the specified feature.  These calculations used all *R*-values.
   
-  The goal of these were to demonstrate that *CMD*, *MI*, and *ENC* are ineffective measures of the density magnitude.  The measurement histograms in particular show little differentiation between the LSS classes, providing a possible explanation for their ineffectiveness.
+- The goal of these were to demonstrate that *CMD*, *MI*, and *ENC* are ineffective measures of the density magnitude.  The measurement histograms in particular show little differentiation between the LSS classes, providing a possible explanation for their ineffectiveness.
 
 ### vor
-  These figures contain predictions made by an algorithm trained using only *VOR*.
+- These figures contain predictions made by an algorithm trained using only *VOR*.
   
-  These show that *VOR* was an ineffective measure of the density magnitude.  This is especially apparent in the HMF and ROC AUC.
+- These show that *VOR* was an ineffective measure of the density magnitude.  This is especially apparent in the HMF and ROC AUC.
 
 ### pca
-  These figures contain predictions made by an algorithm trained using only the *PCA* calculations at all *R*-values.
+- These figures contain predictions made by an algorithm trained using only the *PCA* calculations at all *R*-values.
   
-  The poor results, particularly of the HMF and ROC AUC, show that directionality calculations alone are insufficient for generating robust class predictions.;
+- The poor results, particularly of the HMF and ROC AUC, show that directionality calculations alone are insufficient for generating robust class predictions.;
 
 ### vor_pca
-  These figures contain predictions made by an algorithm trained using only *VOR* and *PCA* using all possible *R*-values for the *PCA* calculations.
+- These figures contain predictions made by an algorithm trained using only *VOR* and *PCA* using all possible *R*-values for the *PCA* calculations.
   
-  The goal of these were to demonstrate that, even with directionality calculations, *VOR* was a poor proxy for local density magnitude.
+- The goal of these were to demonstrate that, even with directionality calculations, *VOR* was a poor proxy for local density magnitude.
 
 
 ## Subdirectory structure
 
 ### feature_importances, hmf, measurement_histograms, roc
-  Contain plots of the feature importances, HMFs, measurement histograms, and ROC curves for each metric set, respectively.  These plots are discussed in greater detail in Sections 4.1-3.
+- Contain plots of the feature importances, HMFs, measurement histograms, and ROC curves for each metric set, respectively.  These plots are discussed in greater detail in Sections 4.1-3.
 
 ### prob_halo-fil, prob_halo-void, prob_fil-void
-  These are probability fields for the predictions made by the algorithm trained using a given metric set.  These show the degree to which a given metric set was able to differentiate between classes.
+- These are probability fields for the predictions made by the algorithm trained using a given metric set.  These show the degree to which a given metric set was able to differentiate between classes.
   
   - **prob_halo-fil**: each particle was classified as a halo or filament particle, and the coloration for a given particle corresponds with the halo probability assigned to it minus the filament probability; a positive value (corresponding to light blue coloration) indicated that the algorithm assigned the particle a higher probability of being a halo particle than of being a filament particle; a negative value (orange coloration) indicates that the particle was more likely to be a filament member than a halo member; and a value near zero (black coloration) indicates that the particle's class was ambiguous.
 
-  Of note, *CMD*, *MI*, and *ENC* generally assigned particles extreme probability difference values to particles (1, -1, or 0), possibly indicating the existence of an implicit density magnitude cutoff.  *KNN* exhibited less extreme values, though the probabilities assigned were dependent on the maximum *k*-value used.  The addition of *PCA* calculations improved robustness by lessening the strength of this dependence.
-  
-  These plots are discussed in detail in Sections 3.1, 3.2, and 4.4.
+   - Of note, *CMD*, *MI*, and *ENC* generally assigned particles extreme probability difference values to particles (1, -1, or 0), possibly indicating the existence of an implicit density magnitude cutoff.  *KNN* exhibited less extreme values, though the probabilities assigned were dependent on the maximum *k*-value used.  The addition of *PCA* calculations improved robustness by lessening the strength of this dependence.
+
+- These plots are discussed in detail in Sections 3.1, 3.2, and 4.4.
   
   - **prob_halo-void**: each particle was classified as a halo or void particle, and the coloration for a given particle corresponds with the halo probability assigned to it minus the void probability.  These plots were not discussed in the article.
   
-  Virtually all particles were assigned a probability difference of 1 or -1, indicating that, as expected by the stark difference in visual appearance between the structures, the algorithm was able to easily distinguish between these structures.
+  - Virtually all particles were assigned a probability difference of 1 or -1, indicating that, as expected by the stark difference in visual appearance between the structures, the algorithm was able to easily distinguish between these structures.
 
   - **prob_fil-void**: each particle was classified as a filament or void particle, and the coloration for a given particle corresponds with the filamet probability assigned to it minus the void probability.  These plots were not discussed in the article.
-  
-  As in **prob_halo-void**, virtually all particles were assigned a probability difference of 1 or -1, allowing the same conclusions to be drawn.
+
+- As in **prob_halo-void**, virtually all particles were assigned a probability difference of 1 or -1, allowing the same conclusions to be drawn.
 
 
 
