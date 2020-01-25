@@ -8,7 +8,9 @@ Brandon Buncher<sup>1</sup> and Matias Carrasco Kind<sup>2,3</sup>
 <sub><sup><sup>3</sup>National Center for Supercomputing Applications, Urbana IL 61801 USA</sup></sub>  
 
 
-This repository contains supplementary material for Probabilistic cosmic web classification using fast-generated training data (https://arxiv.org/abs/1912.04412).
+### This repository contains supplementary material for Probabilistic cosmic web classification using fast-generated training data (https://arxiv.org/abs/1912.04412).
+
+## Summary
 
 We describe a novel trained machine learning algorithm we developed to classify individual cosmic web particles as members of halos/clusters, filaments, and voids.  We trained a random forest algorithm using a "fast-generated" dataset.  This dataset was designed to approximate the large-scale features of the cosmic web using pre-determined generation algorithm.  While this model lacks physical detail, it can be used to generate training data at a fraction of the cost of an N-body simulation without affecting classification accuracy.  This algorithm is described in detail in Section 2.1, and we demonstrate the robustness of its predictions in in Section 4.
 
@@ -23,7 +25,7 @@ In this repository, we have included supplementary figures relevant to the artic
 Note that some of these plots are included in the paper directly or with altered formatting; however, we chose to include these figures here to allow for easier comparison of the different metric sets.
 
 
-# Key
+## Key
 
 **Training Metrics**
 
@@ -38,26 +40,26 @@ For each particle (referred to here as the *central particle*) in the training d
 | *KNN*        | Distance between the central particle and its *k*th nearest neighbor |
 | *PCA*        | Principal component analysis explained variance ratio: a PCA decomposition was performed on the positions of all particles within a radius *R* of the *central particle*.  The difference between the largest and smallest explained variance ratios was used to measure the density field directionality.  For more information on PCA decomposition, see (1) and (2) |
 
-# Folder contents
+## Folder contents
 
-## train
+### train
 
 Contains figures showing the training dataset with and without void particles.  The way that this dataset was generated is described in Section 2.1.
 
-## test_true
+### test_true
 
 Contains figures showing the toy model prediction dataset (referred to as TSIM) with and without void particles.  The coloration corresponds with the true class values inherited from its creation algorithm.  The way that this dataset was generated is described in Section 2.1.
 
-## toy_to_SIM
+### toy_to_SIM
 
 Contains figures showing the predictions made by the random forest algorithm on SIM, an N-body simulation with 256^3 particles (described in detail in Section 2 and Table 2).  These predictions are described in Section 3.1.
 
-## toy_to_TSIM
+### toy_to_TSIM
 
 Contains figures showing the predictions made by the random forest algorithm on TSIM.  These predictions are described in Section 3.2.
 
 
-# File naming conventions / reason for inclusion
+## File naming conventions / reason for inclusion
 
 ### neigh_max\<n\>
   These figures contain predictions made by an algorithm trained with only *KNN* calculations for *k* <= *n*.
@@ -95,7 +97,7 @@ Contains figures showing the predictions made by the random forest algorithm on 
   The goal of these were to demonstrate that, even with directionality calculations, *VOR* was a poor proxy for local density magnitude.
 
 
-# Subdirectory structure
+## Subdirectory structure
 
 ### feature_importances, hmf, measurement_histograms, roc
   Contain plots of the feature importances, HMFs, measurement histograms, and ROC curves for each metric set, respectively.  These plots are discussed in greater detail in Sections 4.1-3.
@@ -119,8 +121,19 @@ Contains figures showing the predictions made by the random forest algorithm on 
 
 
 
-# References
+## References
 
 (1) Pedregosa F., et al., 2011, Journal of Machine Learning Research, 12, 2825
 
 (2) Tipping M. E., Bishop C. M., 1998, Mixtures of Probabilistic Principal Component Analysers
+
+For a full list of references used, please see the article.
+
+
+## Acknowledgements
+
+This material is based upon work supported by the National Science Foundation Graduate Research Fellowship Program under Grant No. DGE --- 1746047
+
+The second author's work has been supported by grant projects NSF AST 07-15036 and NSF AST 08-13543.
+
+This research is part of the Blue Waters sustained-petascale computing project, which is supported by the National Science Foundation (awards OCI-0725070 and ACI-1238993) and the state of Illinois. Blue Waters is a joint effort of the University of Illinois at Urbana-Champaign and its National Center for Supercomputing Applications.
