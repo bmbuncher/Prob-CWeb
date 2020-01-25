@@ -97,7 +97,7 @@ Contains figures showing the predictions made by the random forest algorithm on 
 
 # Subdirectory structure
 
-### feature_importances, hmf, measurement_historams, roc
+### feature_importances, hmf, measurement_histograms, roc
   Contain plots of the feature importances, HMFs, measurement histograms, and ROC curves for each metric set, respectively.  These plots are discussed in greater detail in Sections 4.1-3.
 
 ### prob_halo-fil, prob_halo-void, prob_fil-void
