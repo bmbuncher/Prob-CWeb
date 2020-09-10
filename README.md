@@ -8,7 +8,9 @@ Brandon Buncher<sup>1</sup> and Matias Carrasco Kind<sup>2,3</sup>
 <sub><sup><sup>3</sup>National Center for Supercomputing Applications, Urbana IL 61801 USA</sup></sub>  
 
 
-### This repository contains supplementary material for Probabilistic cosmic web classification using fast-generated training data (https://arxiv.org/abs/1912.04412).
+### This repository contains supplementary material for Probabilistic cosmic web classification using fast-generated training data (full article: https://doi.org/10.1093/mnras/staa2008 or preprint: https://arxiv.org/abs/1912.04412)
+
+For the reuse of any of these files, please cite the MNRAS version of the article.
 
 ## Summary
 
